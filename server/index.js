@@ -25,7 +25,7 @@ connection.connect(function(err) {
 
 connection.query('SELECT player_name from Players', function (error, results, fields){
   app.get("/api", (req, res) => {
-    res.json({message: results.map(p=>p.player_name)})
+    res.json({message: "results"})
   })
 })
 
