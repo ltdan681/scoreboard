@@ -32,9 +32,9 @@ connection.query('SELECT player_name from Players', function (error, results, fi
 // Have node serve the filels for our built react app
 app.use(express.static(path.resolve(__dirname, '../client/build')))
 
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'))
-})
+// app.get("*", (req, res) => {
+//   res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'))
+// })
 
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`)
