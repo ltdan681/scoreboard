@@ -24,11 +24,12 @@ connection.connect(function(err) {
 });
 
 connection.query('SELECT player_name from Players', function (error, results, fields){
-  app.get("/api", (req, res) => {
-    res.json({message: "results"})
-  })
+  console.log("test")
 })
 
+app.get("/api", (req, res) => {
+  res.json({message: "results"})
+})
 // Have node serve the filels for our built react app
 app.use(express.static(path.resolve(__dirname, '../client/build')))
 
