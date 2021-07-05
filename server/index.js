@@ -23,11 +23,12 @@ connection.connect(function(err) {
   console.log("Connected to Database")
 });
 
-connection.query('SELECT player_name from Players', function (error, results, fields){
+connection.query('SELECT player_name from Players', function (error, results, fields) {
   app.get("/api", (req, res) => {
     res.json({message: results.map(p => p.player_name)})
   })
 })
+
 
 // Have node serve the filels for our built react app
 app.use(express.static(path.resolve(__dirname, '../client/build')))

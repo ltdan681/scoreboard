@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -11,10 +10,17 @@ function App() {
       .then((data) => setData(data.message))
   }, [])
 
+  // const names = data.map(n => {
+  //   return(
+  //     <ul>
+  //       <li>{n}</li>
+  //     </ul>
+  //   )
+  // })
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           {!data ? "Loading..." : data}
         </p>
